@@ -12,7 +12,7 @@ RUN apk add git \
     && rm -rf /var/cache/apk/*
 
 # Actual joal image with jre only
-FROM openjdk:8u181-jre-alpine
+FROM --platform=$TARGETPLATFORM openjdk:8u181-jre-alpine
 
 LABEL name="joal"
 LABEL maintainer="joal.contact@gmail.com"
